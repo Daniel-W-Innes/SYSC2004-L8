@@ -40,13 +40,7 @@ public class Player implements Comparable<Object> {
 
 	@Override
 	public int compareTo(Object o) {
-		if (((Player) o).netWorth() < netWorth()) {
-			return 1;
-		} else if (((Player) o).netWorth() > netWorth()) {
-			return -1;
-		} else {
-			return 0;
-		}
+		return Integer.compare(netWorth(), ((Player) o).netWorth());
 	}
 
 }
