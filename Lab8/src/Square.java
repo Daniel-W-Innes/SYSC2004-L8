@@ -2,8 +2,8 @@
 public abstract class Square {
 	private String name;
 	private int number;
-	
-	Square(String name, int number){
+
+	Square(String name, int number) {
 		this.name = name;
 		this.number = number;
 	}
@@ -15,6 +15,6 @@ public abstract class Square {
 	public int getNumber() {
 		return number;
 	}
-	
+
 	public abstract void landOn(Player p) throws Exception;
 }

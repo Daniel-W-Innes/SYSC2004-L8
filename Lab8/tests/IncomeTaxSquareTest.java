@@ -1,9 +1,6 @@
 
-import org.junit.After;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 /**
  *
@@ -27,7 +24,7 @@ public class IncomeTaxSquareTest {
     @Test
     public void testLandOnMinimum() {
         Player p = new Player("purple", null);  // Don't need Square for testing
-        IncomeTaxSquare instance = new IncomeTaxSquare(0);    // Any number is fine.
+        IncomeTaxSquare instance = new IncomeTaxSquare(200);    // Any number is fine.
         instance.landOn(p);
         Assert.assertEquals(p.netWorth(), 1500-(1500/10));    
         Assert.assertEquals(p.getLocation(), instance);
@@ -37,7 +34,7 @@ public class IncomeTaxSquareTest {
     public void testLandOnMaximum() {
         Player p = new Player("purple", null);  // Don't need Square for testing
         p.increaseCash(3000);
-        IncomeTaxSquare instance = new IncomeTaxSquare(0);    // Any number is fine.
+        IncomeTaxSquare instance = new IncomeTaxSquare(200);    // Any number is fine.
         instance.landOn(p);
         Assert.assertEquals(p.netWorth(), 1500+3000-200);    
         Assert.assertEquals(p.getLocation(), instance);

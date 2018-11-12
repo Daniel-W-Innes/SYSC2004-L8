@@ -2,7 +2,6 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 /**
  *
@@ -15,7 +14,8 @@ public class GoSquareTest {
     
     @Before
     public void setUp() {
-        Player p = new Player("purple", null);  // Don't need Square for GoSquare testing
+        @SuppressWarnings("unused")
+		Player p = new Player("purple", null);  // Don't need Square for GoSquare testing
     }
     
     @After

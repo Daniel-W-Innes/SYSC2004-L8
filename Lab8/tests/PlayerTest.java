@@ -4,11 +4,10 @@
  * and open the template in the editor.
  */
 
-import org.junit.After;
+import static org.junit.Assert.fail;
+
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 /**
  *
@@ -21,7 +20,8 @@ public class PlayerTest {
     
      @Test
     public void testComparable() {
-        int amount = 0;
+        @SuppressWarnings("unused")
+		int amount = 0;
         Player p1 = new Player("purple", null);
         Player p2 = new Player("red", null);
         Assert.assertEquals(0, p1.compareTo(p2));
