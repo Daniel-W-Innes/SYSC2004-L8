@@ -7,6 +7,7 @@ public class Player implements Comparable<Object> {
 	Player(String name, Square startSquare) {
 		this.name = name;
 		location = startSquare;
+		cash = 1500;
 	}
 
 	public String getName() {

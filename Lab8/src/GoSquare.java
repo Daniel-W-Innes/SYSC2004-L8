@@ -1,13 +1,14 @@
 
 public class GoSquare extends Square{
 
-	GoSquare(String name, int number) {
-		super(name, number);
+	GoSquare(int number) {
+		super("Go", number);
 	}
 
 	@Override
-	public void landOn(Player p) throws Exception {
-	
+	public void landOn(Player p){
+		p.setLocation(this);
+		p.increaseCash(200);
 	}
 	
 }
